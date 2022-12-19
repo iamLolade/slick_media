@@ -2,7 +2,7 @@ import { Box, Heading } from '@chakra-ui/react'
 
 export default function Navbar() {
     return (
-        <Box bg='#292929' py='2.5em' px='4.8em'>
+        <Box bg='#292929' py='1.5em' px='4.8em'>
             <Heading
                 as='h1'
                 py='0.875em'
