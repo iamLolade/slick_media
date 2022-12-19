@@ -1,8 +1,12 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
+
+// components
+import Header from '../components/Header'
 
 export default function Home() {
     return (
-        <Box>Home</Box>
+        <Box>
+            <Header />
+        </Box>
     )
 }
