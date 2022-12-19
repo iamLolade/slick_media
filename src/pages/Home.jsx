@@ -7,7 +7,7 @@ import Header from '../components/Header'
 import MovieDetails from '../components/MovieDetails'
 
 export default function Home() {
-    const [movie, setMovie] = useState(null)
+    const [movie, setMovie] = useState({})
     const [search, setSearch] = useState('')
     const [searchResult, setSearchResult] = useState([])
 
