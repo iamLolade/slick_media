@@ -63,12 +63,12 @@ export default function Home() {
                         </Stack>
                     }
                         <Flex direction='row' overflowX='scroll'>
-                            {searchResult && search !== '' ? searchResult?.map(search => (
+                            {searchResult && search !== '' && searchResult?.map(search => (
                                 <Flex direction='column'>
                                     <Image src={search?.Poster} h={250} w='full' mr={8}/>
                                     <Text align='center' mr={8} fontWeight={600}>{search?.Title}</Text>
                                 </Flex>
-                            )) : <Spinner />}
+                            ))}
                         </Flex>
                 </Box>
             </Box>
