@@ -14,7 +14,7 @@ export default function Home() {
     useEffect(() => {
         const getMovie = async () => {
             const data = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=325824a3')
-            
+
             if(data.statusText === 'OK') {
                 setMovie(data.data)
             }
@@ -54,14 +54,16 @@ export default function Home() {
                 {/* movies */}
                 <Box mt={16}>
                     <Text fontWeight={600}>Movie(s)</Text>
-                    {search === '' && <Stack direction={['column', 'row']} p='2em' px='8em'>
-                        <Box w='100%'>
-                            {movie ? <Image src={movie?.Poster} alt='Poster' borderRadius={6}/>: <Spinner />}
-                        </Box>
-                        {movie ? <MovieDetails movie={movie}/>: <Spinner />}
-                    </Stack>}
+                    {search === '' && 
+                        <Stack direction={['column', 'row']} p='2em' px='8em'>
+                            <Box w='100%'>
+                                {movie ? <Image src={movie?.Poster} alt='Poster' borderRadius={6}/>: <Spinner />}
+                            </Box>
+                            {movie ? <MovieDetails movie={movie}/>: <Spinner />}
+                        </Stack>
+                    }
                         <Flex direction='row' overflowX='scroll'>
-                            {searchResult ? searchResult?.map(search => (
+                            {searchResult && search !== '' ? searchResult?.map(search => (
                                 <Flex direction='column'>
                                     <Image src={search?.Poster} h={250} w='full' mr={8}/>
                                     <Text align='center' mr={8} fontWeight={600}>{search?.Title}</Text>
