@@ -5,7 +5,7 @@ export default function Navbar() {
         <Box bg='#292929' py='1.5em' px='4.8em'>
             <Heading
                 as='h1'
-                py='0.875em'
+                py='0.8em'
                 px='1.1875em'
                 border='1px solid #FFFFFF'
                 borderRadius={0}

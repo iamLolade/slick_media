@@ -3,8 +3,8 @@ import header_bg from '../public/Images/header-bg.svg'
 
 export default function Header() {
     return (
-        <Box bgImage={header_bg} h='40vh'>
-            <Text fontSize={42} fontWeight={700} color='#fff' p='2em'>
+        <Box bgImage={header_bg} h='35vh' p='4em'>
+            <Text fontSize={42} fontWeight={700} color='#fff'>
                 Watch <br />something <br />incredible.
             </Text>
         </Box>
