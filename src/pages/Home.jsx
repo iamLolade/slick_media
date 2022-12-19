@@ -21,7 +21,7 @@ export default function Home() {
         }
 
         getMovie()
-    }, [movie, searchResult])
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
